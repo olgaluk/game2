@@ -1,0 +1,178 @@
+.container-battle {
+    width: 100%;
+    height: 100vh;
+    background-image: url('./images/backgroundBattle.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container-players {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-evenly;
+}
+
+.player-container {
+    width: 325px;
+    height: 350px;
+    background-size: 100% 100%;
+    margin-bottom: 4%;
+    animation: movePlayer 1s infinite linear;
+    -webkit-animation: movePlayer 1s infinite linear;
+}
+
+.monster-container {
+    width: 55%;
+    height: 30%;
+    margin-bottom: 2%;
+}
+
+.information-table {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.score-player {
+    width: 25%;
+    height: 100%;
+    padding: 5px;
+    background-image: url('./images/modalBackground.png');
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.health-points {
+    width: 70%;
+    height: 20%;
+    margin: 0 auto;
+    border : 3px solid #ffdc7a;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.health-points>div {
+    width: 25%;
+    height: 100%;
+}
+
+.health-points:first-child {
+    border-bottom-left-radius : 30px;
+    border-top-left-radius: 30px;
+    background-color: #c05a3f;
+}
+
+.health-points:last-child {
+    border-bottom-right-radius : 30px;
+    border-top-right-radius: 30px;
+    background-color: #c05a3f;
+}
+
+.health-points:nth-child(2) {
+    background-color: #c05a3f;
+}
+
+.health-points:nth-child(3) {
+    background-color: #c05a3f;
+}
+
+.score-player > p {
+    font-size: 1.3em;
+    font-style: italic;
+    color: #e8c65a;
+}
+
+.monster-head {
+    position: absolute;
+    z-index: 4;
+    bottom: 210px;
+    left: 140px;
+    height: 220px;
+    animation: moveHead 1s infinite linear;
+    -webkit-animation: moveHead 1s infinite linear;
+}
+
+.monster-body {
+    position: absolute;
+    z-index: 3;
+    bottom: 6%;
+    left: 117px;
+    height: 269px;
+}
+
+.monster-hand_right {
+    position: absolute;
+    z-index: 5;
+    bottom: 11%;
+    left: 146px;
+    height: 150px;
+    animation: moveHand 1s infinite linear;
+    -webkit-animation: moveHand 1s infinite linear;
+}
+
+.monster-hand_left {
+    position: absolute;
+    z-index: 2;
+    bottom: 13%;
+    left: 279px;
+    height: 130px;
+    animation: moveHand 1s infinite linear;
+    -webkit-animation: moveHand 1s infinite linear;
+}
+
+.monster-weapon {
+    position: absolute;
+    z-index: 2;
+    bottom: 13%;
+    left: 279px;
+    height: 70px;
+    animation: moveHand 1s infinite linear;
+    -webkit-animation: moveHand 1s infinite linear;
+}
+
+@-webkit-keyframes moveHead {
+    0% {-webkit-transform: rotate(0deg);}
+    50% {-webkit-transform: rotate(5deg);}
+    100% {-webkit-transform: rotate(0deg)}
+}
+
+@keyframes moveHead {
+    0% {transform: rotate(0deg);}
+    50% {transform: rotate(5deg);}
+    100% {transform: rotate(0deg)}
+}
+
+@keyframes moveHand {
+    0% {transform: rotate(0deg)}
+    50% {
+        transform-origin: 60% 0;
+        transform: rotate(5deg);
+    }
+    100% {transform: rotate(0deg)}
+}
+
+@-webkit-keyframes moveHand {
+    0% {-webkit-transform: rotate(0deg)}
+    50% {
+        -webkit-transform-origin: 60% 0;
+        -webkit-transform: rotate(5deg);
+    }
+    100% {-webkit-transform: rotate(0deg)}
+}
+
+@keyframes movePlayer {
+    0% {background-image: url('./images/player.png')}
+    15% {background-image: url('./images/animePlayer/2_animation_hurt_001.png')}
+    30% {background-image: url('./images/animePlayer/2_animation_hurt_002.png')}
+    45% {background-image: url('./images/animePlayer/2_animation_hurt_003.png')}
+    65% {background-image: url('./images/animePlayer/2_animation_hurt_002.png')}
+    85% {background-image: url('./images/animePlayer/2_animation_hurt_001.png')}
+    100% {background-image: url('./images/player.png')}
+}

@@ -1,0 +1,151 @@
+.notifications {
+    width: 40%;
+    height: fit-content;
+    background-image: url('./images/modalBackground.png');
+    background-size: 100% 100%;
+    position: fixed;
+    z-index: 9999;
+    top: 25%;
+    right: 30%;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 50px;
+}
+
+.modal-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.modal-message {
+    box-sizing: border-box;
+    width: 85%;
+    height: 200px;
+    border: 1px solid #654b2a;
+    padding: 5px;
+    overflow: auto;
+    color: #e8c65a;
+}
+
+.modal-message > p {
+    font-size: 1.5em;
+}
+
+.modal-message > h2 {
+    -webkit-animation: pulsate 1.2s linear infinite;
+    animation: pulsate 1.2s linear infinite;
+}
+
+.modal-close {
+    width: 45px;
+    height: 45px;
+    cursor:pointer; 
+    text-align: center;
+}
+
+.modal-close:hover {
+    color: #fff;
+    outline: none;
+}
+
+.modal-close > span {
+    font-size: 4em;
+    text-align: center;
+}
+
+.modal-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.modal-slider {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-left, .modal-right {
+    border: 1px solid #000000;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #ffffff;
+    outline: none;
+    transition: 0.3s;
+    text-align: center;
+    font-size: 1.2em;
+    background: #e8c65a linear-gradient(#ffdc7a, #654b2a);
+    -webkit-animation: pulsate 1.2s linear infinite;
+    animation: pulsate 1.2s linear infinite;
+}
+
+.modal-left:hover, .modal-right:hover {
+    color: #fff;
+    background: #654b2a;
+    transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+    cursor: pointer;
+}
+
+.modal-left:active, .modal-right:active {
+    outline: none;
+}
+
+.modal-left:focus, .modal-right:focus {
+    outline: none;
+}
+
+.modal-slide {
+    width: 7px;
+    height: 7px;
+    margin: 4px 0;
+    border-radius: 100%;
+    background-color: #ffffff;
+}
+
+.modal-button > input {
+    width: 100%;
+    font-size: 1.5em;
+    font-weight: 500;
+    color: rgb(245,245,245);
+    text-shadow: 0 -1px rgba(0,0,0,.1);
+    text-decoration: none;
+    user-select: none;
+    padding: .3em 1em;
+    outline: none;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    background: #e8c65a linear-gradient(#ffdc7a, #654b2a);
+    -webkit-animation: pulsate 1.2s linear infinite;
+    animation: pulsate 1.2s linear infinite;
+}
+
+.modal-button > input:hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+    cursor: pointer;
+}
+
+.modal-button > input:focus {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+    cursor: pointer;
+    border: 2px solid #000000;
+    background: #654b2a;
+}
+
+@-webkit-keyframes pulsate {
+    50% {color: #fff; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff;}
+}
+
+@keyframes pulsate {
+    50% {color: #fff; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff;}
+}

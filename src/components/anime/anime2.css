@@ -1,0 +1,73 @@
+.anime2-right {
+    position: absolute;
+    bottom: 15%;
+    width: 200px;
+    height: 200px;
+    background-size: 100% 100%; 
+    z-index: 15;
+    -webkit-animation: go-left-right2 1.2s ease-in;
+    animation: go-left-right2 1.2s ease-in;
+}
+
+.anime2-left {
+    position: absolute;
+    bottom: 15%;
+    width: 200px;
+    height: 200px;
+    background-size: 100% 100%;
+    z-index: 15;
+    animation: go-right-left2 1.2s ease-in;
+    -webkit-animation: go-right-left2 1.2s ease-in;
+}
+
+@keyframes go-left-right2 {
+    from {
+        left: 100px;
+        background-image: url('./images/scratch.png');
+        transform: scale(.5, .5);
+    }
+    to {
+        left: calc(85% - 150px);
+        background-image: url('./images/scratch.png');
+        transform: scale(2, 2);
+    }
+}
+
+@-webkit-keyframes go-left-right2 {
+    from {
+        left: 100px;
+        background-image: url('./images/scratch.png');
+        -webkit-transform: scale(.5, .5);
+    }
+    to {
+        left: calc(85% - 150px);
+        background-image: url('./images/scratch.png');
+        -webkit-transform: scale(2, 2);  
+    }
+}
+
+@keyframes go-right-left2 {
+    from {
+        left: calc(85% - 150px);
+        background-image: url('./images/scratch.png');
+        transform: scale(.5, .5);
+    }
+    to {
+        left: 100px;
+        background-image: url('./images/scratch.png');
+        transform: scale(2, 2);
+    }
+}
+
+@-webkit-keyframes go-right-left2 {
+    from {
+        left: calc(85% - 150px);
+        background-image: url('./images/scratch.png');
+        -webkit-transform: scale(.5, .5);
+    }
+    to {
+        left: 100px;
+        background-image: url('./images/scratch.png');
+        -webkit-transform: scale(2, 2);
+    }
+}

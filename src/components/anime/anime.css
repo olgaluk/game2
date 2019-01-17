@@ -1,0 +1,71 @@
+.anime-right {
+    position: absolute;
+    bottom: 15%;
+    width: 200px;
+    height: 200px;
+    background-size: 100% 100%; 
+    -webkit-animation: go-left-right 1s ease-in;
+    animation: go-left-right 1s ease-in;
+}
+
+.anime-left {
+    position: absolute;
+    bottom: 15%;
+    width: 200px;
+    height: 200px;
+    background-size: 100% 100%;
+    animation: go-right-left 1s ease-in;
+    -webkit-animation: go-right-left 1s ease-in;
+}
+
+@keyframes go-left-right {
+    from {
+        left: 100px;
+        background-image: url('./images/anime1.png');
+        transform: scale(.5, .5) rotate(0deg);
+    }
+    to {
+        left: calc(85% - 150px);
+        background-image: url('./images/anime1.png');
+        transform: scale(2, 2) rotate(360deg);
+    }
+}
+
+@-webkit-keyframes go-left-right {
+    from {
+        left: 100px;
+        background-image: url('./images/anime1.png');
+        -webkit-transform: scale(.5, .5) rotate(0deg);
+    }
+    to {
+        left: calc(85% - 150px);
+        background-image: url('./images/anime1.png');
+        -webkit-transform: scale(2, 2) rotate(360deg);  
+    }
+}
+
+@keyframes go-right-left {
+    from {
+        left: calc(85% - 150px);
+        background-image: url('./images/anime1.png');
+        transform: scale(.5, .5) rotate(0deg);
+    }
+    to {
+        left: 100px;
+        background-image: url('./images/anime1.png');
+        transform: scale(2, 2) rotate(360deg);
+    }
+}
+
+@-webkit-keyframes go-right-left {
+    from {
+        left: calc(85% - 150px);
+        background-image: url('./images/anime1.png');
+        -webkit-transform: scale(.5, .5) rotate(0deg);
+    }
+    to {
+        left: 100px;
+        background-image: url('./images/anime1.png');
+        -webkit-transform: scale(2, 2) rotate(360deg);
+    }
+}

@@ -1,0 +1,12 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+
+.response-total {
+    color: #550707;
+    font-size: 2.5em;
+    font-weight: 800;
+    margin: 0 auto;
+}
+
+.lose-health {
+    background-color: #1b304a;
+}

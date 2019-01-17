@@ -1,0 +1,72 @@
+.form-container {
+    width: 40%;
+    height: 80%;
+    background-image: url('./images/form-window.png');
+    background-size: 100% 100%;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-login__input > p {
+    font-size: 2.2em;
+    font-weight: 800;
+    font-style: italic;
+    color: #a80f0f;
+}
+
+.form-login__input-name {
+    width: 85%;
+    margin-top: 5%;
+    margin-left: 7%;
+    font-size: 1.5em;
+    font-weight: 700;
+    border: 1px solid #000000;
+}
+
+.form-login__input-name:focus {
+    border: 2px solid #000000;
+}
+
+.form-button {
+    width: 85%;
+    margin-top: 5%;
+    margin-left: 7%;
+    font-size: 1.5em;
+    font-weight: 700;
+    color: rgb(245,245,245);
+    text-shadow: 0 -1px rgba(0,0,0,.1);
+    text-decoration: none;
+    user-select: none;
+    padding: .3em 1em;
+    outline: none;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    background: #c05a3f linear-gradient(#f79393, #a80f0f);
+    -webkit-animation: pulsate 1.2s linear infinite;
+    animation: pulsate 1.2s linear infinite;
+}
+
+.form-button:hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+    cursor: pointer;
+}
+
+.form-button:focus {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+    cursor: pointer;
+    border: 2px solid #000000;
+    background: #c05a3f linear-gradient(#ff3131, #af0f0f);
+}
+
+@-webkit-keyframes pulsate {
+    50% {color: #fff; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff;}
+}
+
+@keyframes pulsate {
+    50% {color: #fff; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff;}
+}
